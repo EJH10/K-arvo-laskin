@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>K-arvo-laskin</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Koras Ky</h1>
+
+    <h2>Belarus-traktorien 320 - 1523 mallien K-arvo-laskin</h2>
+    <br>
+
+    <p>Minskin traktoritehtaan ohjeen mukaisesti Belarus-traktorien rengaskoot tulee sovittaa siten, että eteenpäin ajettaessa, nelivedon automaattiasennon ollessa kytkettynä, takapyörien luistaessa 2,5-3,5%, kytkeytyvät etupyörät vetämään.</p>
+    <p>Tämä voidaan toteuttaa valitsemalla rengaskoot edessä ja takana toisiinsa sopiviksi. Takapyörän 2,5-3,5% luisto tarkoittaa K-arvona = -2,5--3,5, tällöin etupyörän kehänopeus on takapyörän kehänopeutta hieman pienempi.</p>
+    <p>K-arvo saadaan laskettua traktorimallista riippuvien välityssuhteiden ja kuormitettuna olevien renkaitten säteitten avulla. Tämä säde voidaan mitata traktorista tai käyttää renkaan valmistajan ilmoittamaa arvoa. </p>
+    <p>Koska rengaskokoja ei ole olemassa riittävän monia, voidaan edellä mainitusta optimaalisesta arvosta poiketa hieman. K-arvo välillä 0--5 on sallittu ja välillä -1--5 se on suositeltu.</p>
+    <br>
+
+    <fieldset>
+        <legend>Traktorin tiedot:</legend>
+        <label for="malli">Traktorimalli:</label>
+        <select name="malli" id="malli">
+            <option label="Valitse" value="valitse"></option>
+            <option label="320" value="0.814"></option>
+            <option label="422" value="0.812"></option>
+            <option label="622" value="0.812"></option>
+            <option label="525" value="0.641"></option>
+            <option label="820 vanha" value="0.641"></option>
+            <option label="820 uusi" value="0.741"></option>
+            <option label="825" value="0.641"></option>
+            <option label="892 vanha" value="0.641"></option>
+            <option label="892 uusi" value="0.741"></option>
+            <option label="920 vanha" value="0.641"></option>
+            <option label="920 uusi" value="0.741"></option>
+            <option label="952 vanha" value="0,641"></option>
+            <option label="952 uusi" value="0.741"></option>
+            <option label="1021" value="0.702"></option>
+            <option label="1025" value="0.739"></option>
+            <option label="1221 vanha" value="0.759"></option>
+            <option label="1221 uusi" value="0.719"></option>
+            <option label="1523 vanha" value="0.759"></option>
+            <option label="1523 uusi" value="0.719"></option>
+        </select>    
+            
+        <br>
+        <br>
+        
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+        <legend>K-arvo nykyiselle rengastukselle:</legend>
+
+        <label for="re">Anna eturenkaan säde kuormitettuna, mm:</label>
+        <input type="number" name="re" id="re" min="200" max="1000" step="1">
+        
+        <label for="rt">Anna takarenkaan säde kuormitettuna, mm:</label>
+        <input type="number" name="rt" id="rt" min="500" max="1000" step="1">
+
+        <button type="button" onclick="laske()">Laske</button>
+        <br>
+        <br>
+
+        <label>K-arvo on:</label>
+        <p id="tulos"></p>
+    </fieldset>
+    
+    
+</body>
+
+</html> 
